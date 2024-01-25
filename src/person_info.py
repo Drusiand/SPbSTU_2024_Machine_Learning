@@ -43,4 +43,4 @@ class PersonInfo:
                 f"Weight: {self.weight}\n"
                 f"Activity level: {self.activity_level}\n"
                 f"Goal: {self.goal}\n"
-                )
+                f"+-------------------------------+\n")

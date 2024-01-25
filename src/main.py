@@ -8,26 +8,23 @@ from regressor import Regressor
 
 
 def test():
-    # df = pd.read_csv("../data/dataset/dataset.csv")
-    # regressor = Regressor(df)
-    # regressor.prepare_model(tune_parameters=False)
-    #
-    # person_info = PersonInfo(age=23,
-    #                          gender=Gender.MALE.value,
-    #                          height=180,
-    #                          weight=75,
-    #                          activity_level=ActivityLevel.MILD.value,
-    #                          goal=Goal.WEIGHT_LOSE.value)
+    df = pd.read_csv("../data/dataset/dataset.csv")
+    regressor = Regressor(df)
+    regressor.prepare_model(tune_parameters=False)
 
-    for i in range(10):
+    person_info = PersonInfo(age=23,
+                             gender=Gender.MALE.value,
+                             height=180,
+                             weight=75,
+                             activity_level=ActivityLevel.MILD.value,
+                             goal=Goal.WEIGHT_LOSE.value)
 
-        scanner = ImageScanner([Language.RUSSIAN])
-        parser = Parser()
-        product_info = parser.parse(scanner.scan_image(f"../data/img/product_{i+1}.jpg"))
-        print(i)
-        print(product_info)
-
-    # regressor.predict(person_info, product_info)
+    scanner = ImageScanner([Language.RUSSIAN])
+    parser = Parser()
+    product_info = parser.parse(scanner.scan_image("../data/img/product_1.jpg"))
+    print(product_info)
+    print(person_info)
+    regressor.predict(person_info, product_info)
 
 
 if __name__ == '__main__':

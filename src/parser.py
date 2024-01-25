@@ -76,22 +76,3 @@ class Parser:
                 carbo = self.__validate_number(raw)
                 self.carbo_keywords.clear()
         return ProductInfo(protein, fats, carbo)
-
-    # def parse(self, text: list[str]) -> ProductInfo:
-    #     protein, fats, carbo = 0, 0, 0
-    #     for paragraph in text:
-    #         tokens = paragraph.split(TEXT_DELIMITER)
-    #         for i, token in enumerate(tokens):
-    #             for keyword in self.protein_keywords:
-    #                 protein_index = self.find_close_word(tokens, keyword)
-    #                 raw = self.__find_next_number(tokens, protein_index + 1)
-    #                 protein = self.__validate_number(raw)
-    #             # if token.lower() in self.protein_keywords:
-    #
-    #             # elif token.lower() in self.fats_keywords:
-    #             #     raw = self.__find_next_number(tokens, i + 1)
-    #             #     fats = self.__validate_number(raw)
-    #             # elif token.lower() in self.carbo_keywords:
-    #             #     raw = self.__find_next_number(tokens, i + 1)
-    #             #     carbo = self.__validate_number(raw)
-    #         return ProductInfo(protein, fats, carbo)

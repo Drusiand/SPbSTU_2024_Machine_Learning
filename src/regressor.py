@@ -106,4 +106,4 @@ class Regressor:
 
         calories = product_info.protein * 4 + product_info.fats * 9 + product_info.carbo * 4
         result = "{:.2f}".format(self.model.predict(request, verbose=True) / calories * 100)
-        print(f"Suitable amount of the product: {result} gramms")
+        print(f"Suitable amount of the product: {result} grams")
